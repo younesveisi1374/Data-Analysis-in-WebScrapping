@@ -1,3 +1,11 @@
+# This project is written with three different programming models:
+
+1- Simple coding based on preliminary principles
+2- Based on the function
+3- Based on the class
+It has also been tried to follow the principles of clean coding as much as possible
+The main goal was not only to learn how each model works but also improve my skills while writing readable and maintainable codes
+
 # Extracting and Analysis Used Car Data from TrueCar
 
 This code extracts used car data from the TrueCar website using BeautifulSoup and saves it to a MySQL database. It then retrieves the data from the database and writes it to a CSV file. Finally, it uses the extracted data to train a decision tree model and make predictions.
