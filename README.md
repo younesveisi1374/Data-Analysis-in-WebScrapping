@@ -1,4 +1,4 @@
-# This project is written with three different programming models:
+# This project is written with three different programming models
 
 1- Simple coding based on preliminary principles.
 
@@ -10,7 +10,9 @@ It has also been tried to follow the principles of clean coding as much as possi
 
 The main goal was not only to learn how each model works but also improve my skills while writing readable and maintainable codes.
 
-# Extracting and Analysis Used Car Data from TrueCar
+## Extracting and Analysis Used Car Data from TrueCar
+
+## Introduction
 
 This code extracts used car data from the TrueCar website using BeautifulSoup and saves it to a MySQL database. It then retrieves the data from the database and writes it to a CSV file. Finally, it uses the extracted data to train a decision tree model and make predictions.
 
@@ -28,7 +30,7 @@ To run this code, you need to have the following libraries installed:
 
 You can install these libraries using pip by running the following command:
 
-```
+```Shell
 pip install csv re mysql-connector-python requests beautifulsoup4 scikit-learn
 ```
 
