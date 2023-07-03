@@ -1,9 +1,13 @@
 # This project is written with three different programming models:
 
 1- Simple coding based on preliminary principles.
+
 2- Based on the function.
+
 3- Based on the class.
+
 It has also been tried to follow the principles of clean coding as much as possible.
+
 The main goal was not only to learn how each model works but also improve my skills while writing readable and maintainable codes.
 
 # Extracting and Analysis Used Car Data from TrueCar
