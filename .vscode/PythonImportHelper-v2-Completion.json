@@ -1,0 +1,344 @@
+[
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "zip_longest",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "zip_longest",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "zip_longest",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "mysql.connector",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "tree",
+        "importPath": "sklearn",
+        "description": "sklearn",
+        "isExtraImport": true,
+        "detail": "sklearn",
+        "documentation": {}
+    },
+    {
+        "label": "tree",
+        "importPath": "sklearn",
+        "description": "sklearn",
+        "isExtraImport": true,
+        "detail": "sklearn",
+        "documentation": {}
+    },
+    {
+        "label": "tree",
+        "importPath": "sklearn",
+        "description": "sklearn",
+        "isExtraImport": true,
+        "detail": "sklearn",
+        "documentation": {}
+    },
+    {
+        "label": "CarDataExtractor",
+        "kind": 6,
+        "importPath": "Class-Base-Data-analysis",
+        "description": "Class-Base-Data-analysis",
+        "peekOfCode": "class CarDataExtractor:\n    def __init__(self):\n        self.list_site = []\n        self.names = []\n        self.prices = []\n        self.miles = []\n        self.years = []\n        self.colors = []\n    def extract_car_data(self):\n        for i in range(1, 31):",
+        "detail": "Class-Base-Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "car_data_extractor",
+        "kind": 5,
+        "importPath": "Class-Base-Data-analysis",
+        "description": "Class-Base-Data-analysis",
+        "peekOfCode": "car_data_extractor = CarDataExtractor()\ncar_data_extractor.extract_car_data()\ncar_data_extractor.write_data_to_database()\ncar_data_extractor.write_data_to_csv()\ncar_data_extractor.ml_learning()",
+        "detail": "Class-Base-Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "list_site",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "list_site = []\nfor i in range(1, 31):\n    string = f\"https://www.truecar.com/used-cars-for-sale/listings/?page={i}\"\n    i += 1\n    list_site.append(string)\n# Initialize lists for storing car data\nnames = []\nprices = []\nmiles = []\nyears = []",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "names",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "names = []\nprices = []\nmiles = []\nyears = []\ncolors = []\n# Loop through each URL and extract car data using BeautifulSoup\nfor i in list_site:\n    url = f\"{i}\"\n    response = requests.get(url)\n    soup = BeautifulSoup(response.text, \"html.parser\")",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "prices",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "prices = []\nmiles = []\nyears = []\ncolors = []\n# Loop through each URL and extract car data using BeautifulSoup\nfor i in list_site:\n    url = f\"{i}\"\n    response = requests.get(url)\n    soup = BeautifulSoup(response.text, \"html.parser\")\n    cars = soup.find_all(\"div\", {\"class\": \"card-content order-3 vehicle-card-body\"})",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "miles",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "miles = []\nyears = []\ncolors = []\n# Loop through each URL and extract car data using BeautifulSoup\nfor i in list_site:\n    url = f\"{i}\"\n    response = requests.get(url)\n    soup = BeautifulSoup(response.text, \"html.parser\")\n    cars = soup.find_all(\"div\", {\"class\": \"card-content order-3 vehicle-card-body\"})\n    # Extract individual car information by searching for specific HTML tags and attributes",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "years",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "years = []\ncolors = []\n# Loop through each URL and extract car data using BeautifulSoup\nfor i in list_site:\n    url = f\"{i}\"\n    response = requests.get(url)\n    soup = BeautifulSoup(response.text, \"html.parser\")\n    cars = soup.find_all(\"div\", {\"class\": \"card-content order-3 vehicle-card-body\"})\n    # Extract individual car information by searching for specific HTML tags and attributes\n    for ad in cars:",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "colors",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "colors = []\n# Loop through each URL and extract car data using BeautifulSoup\nfor i in list_site:\n    url = f\"{i}\"\n    response = requests.get(url)\n    soup = BeautifulSoup(response.text, \"html.parser\")\n    cars = soup.find_all(\"div\", {\"class\": \"card-content order-3 vehicle-card-body\"})\n    # Extract individual car information by searching for specific HTML tags and attributes\n    for ad in cars:\n        name = ad.find(\"span\", {\"class\": \"truncate\"})",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "mydb",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "mydb = mysql.connector.connect(host=\"localhost\", user=\"root\", password=\"2236541\")\ncursor = mydb.cursor()\n# Create a new database called MLLearning (if it doesn't already exist) and use it\ncursor.execute(\"CREATE DATABASE IF NOT EXISTS MLLearning\")\ncursor.execute(\"USE MLLearning\")\n# Create a table called \"car_information\" with columns for ID, name, year, price, miles, and color\nsql_table = \"CREATE TABLE car_information (ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY, Name VARCHAR(255) NOT NULL, Year VARCHAR(255)  NOT NULL, Price FLOAT  NOT NULL, Miles FLOAT  NOT NULL, Color VARCHAR(255) NOT NULL)\"\ncursor.execute(sql_table)\n# Iterate over lists of car data using zip_longest (which allows for missing values)\nfor name, year, price, mile, color in zip_longest(names, years, prices, miles, colors):",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "cursor = mydb.cursor()\n# Create a new database called MLLearning (if it doesn't already exist) and use it\ncursor.execute(\"CREATE DATABASE IF NOT EXISTS MLLearning\")\ncursor.execute(\"USE MLLearning\")\n# Create a table called \"car_information\" with columns for ID, name, year, price, miles, and color\nsql_table = \"CREATE TABLE car_information (ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY, Name VARCHAR(255) NOT NULL, Year VARCHAR(255)  NOT NULL, Price FLOAT  NOT NULL, Miles FLOAT  NOT NULL, Color VARCHAR(255) NOT NULL)\"\ncursor.execute(sql_table)\n# Iterate over lists of car data using zip_longest (which allows for missing values)\nfor name, year, price, mile, color in zip_longest(names, years, prices, miles, colors):\n    # Create an SQL query to insert a new row into the \"car_information\" table with the current values",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "sql_table",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "sql_table = \"CREATE TABLE car_information (ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY, Name VARCHAR(255) NOT NULL, Year VARCHAR(255)  NOT NULL, Price FLOAT  NOT NULL, Miles FLOAT  NOT NULL, Color VARCHAR(255) NOT NULL)\"\ncursor.execute(sql_table)\n# Iterate over lists of car data using zip_longest (which allows for missing values)\nfor name, year, price, mile, color in zip_longest(names, years, prices, miles, colors):\n    # Create an SQL query to insert a new row into the \"car_information\" table with the current values\n    sql_column = f\"INSERT INTO car_information (Name, Year, Price, Miles, Color) VALUES ('{name}', '{year}', '{price}', '{mile}', '{color}')\"\n    # Execute the SQL query using cursor.execute()\n    cursor.execute(sql_column)\n# Commit changes to the database and close the connection\nmydb.commit()",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "mydb",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "mydb = mysql.connector.connect(\n    host=\"localhost\", user=\"root\", password=\"2236541\", database=\"MLLearning\"\n)\n# Execute the MySQL query\ncursor = mydb.cursor()\ncursor.execute(\"SELECT * FROM car_information\")\n# Fetch the data\ndata = cursor.fetchall()\n# Write the data to the CSV file\nwith open(\"output.csv\", mode=\"w\", newline=\"\") as file:",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "cursor = mydb.cursor()\ncursor.execute(\"SELECT * FROM car_information\")\n# Fetch the data\ndata = cursor.fetchall()\n# Write the data to the CSV file\nwith open(\"output.csv\", mode=\"w\", newline=\"\") as file:\n    writer = csv.writer(file)\n    # Write header row\n    writer.writerow([i[0] for i in cursor.description])\n    # Loop through data and write each row to the CSV file",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "data = cursor.fetchall()\n# Write the data to the CSV file\nwith open(\"output.csv\", mode=\"w\", newline=\"\") as file:\n    writer = csv.writer(file)\n    # Write header row\n    writer.writerow([i[0] for i in cursor.description])\n    # Loop through data and write each row to the CSV file\n    for row in data:\n        writer.writerow(row)\n# Close the connections",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "x = []\ny = []\n# Open the output.csv file and read the data as a CSV\nwith open(\"output.csv\", \"r\") as csvfile:\n    # Create a reader object for the CSV data\n    reader = csv.reader(csvfile)\n    # Skip the first row (headers) in the CSV data\n    next(reader)\n    # Loop through the rows in the CSV data\n    for row in reader:",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "y = []\n# Open the output.csv file and read the data as a CSV\nwith open(\"output.csv\", \"r\") as csvfile:\n    # Create a reader object for the CSV data\n    reader = csv.reader(csvfile)\n    # Skip the first row (headers) in the CSV data\n    next(reader)\n    # Loop through the rows in the CSV data\n    for row in reader:\n        # Append the values from columns 2, 3, and 4 to the x list as a list of floats",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "clf",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "clf = tree.DecisionTreeClassifier()\n# Fit the decision tree model using the x and y data\nclf = clf.fit(x, y)\n# Create a new set of data to predict using the trained model\nnew_data = [[2023, 11.500, 123.572]]\n# Predict the class label for the new data point\nanswer = clf.predict(new_data)\n# Print the predicted class label for the new data point\nprint(answer[0])",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "clf",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "clf = clf.fit(x, y)\n# Create a new set of data to predict using the trained model\nnew_data = [[2023, 11.500, 123.572]]\n# Predict the class label for the new data point\nanswer = clf.predict(new_data)\n# Print the predicted class label for the new data point\nprint(answer[0])",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "new_data",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "new_data = [[2023, 11.500, 123.572]]\n# Predict the class label for the new data point\nanswer = clf.predict(new_data)\n# Print the predicted class label for the new data point\nprint(answer[0])",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "answer",
+        "kind": 5,
+        "importPath": "Data-analysis",
+        "description": "Data-analysis",
+        "peekOfCode": "answer = clf.predict(new_data)\n# Print the predicted class label for the new data point\nprint(answer[0])",
+        "detail": "Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "extract_car_data",
+        "kind": 2,
+        "importPath": "Functional-Base-Data-analysis",
+        "description": "Functional-Base-Data-analysis",
+        "peekOfCode": "def extract_car_data(list_site):\n    # Initialize lists for storing car data\n    names = []\n    prices = []\n    miles = []\n    years = []\n    colors = []\n    # Loop through each URL and extract car data using BeautifulSoup\n    for i in list_site:\n        url = f\"{i}\"",
+        "detail": "Functional-Base-Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "write_data_to_database",
+        "kind": 2,
+        "importPath": "Functional-Base-Data-analysis",
+        "description": "Functional-Base-Data-analysis",
+        "peekOfCode": "def write_data_to_database(names, years, prices, miles, colors):\n    # Establish connection with MySQL database\n    mydb = mysql.connector.connect(host=\"localhost\", user=\"root\", password=\"2236541\")\n    cursor = mydb.cursor()\n    # Create a new database called MLLearning (if it doesn't already exist) and use it\n    cursor.execute(\"CREATE DATABASE IF NOT EXISTS MLLearning\")\n    cursor.execute(\"USE MLLearning\")\n    # Create a table called \"car_information\" with columns for ID, name, year, price, miles, and color\n    sql_table = \"CREATE TABLE car_information (ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY, Name VARCHAR(255) NOT NULL, Year VARCHAR(255)  NOT NULL, Price FLOAT  NOT NULL, Miles FLOAT  NOT NULL, Color VARCHAR(255) NOT NULL)\"\n    cursor.execute(sql_table)",
+        "detail": "Functional-Base-Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "write_data_to_csv",
+        "kind": 2,
+        "importPath": "Functional-Base-Data-analysis",
+        "description": "Functional-Base-Data-analysis",
+        "peekOfCode": "def write_data_to_csv():\n    # Connect to the MySQL database\n    mydb = mysql.connector.connect(\n        host=\"localhost\", user=\"root\", password=\"2236541\", database=\"MLLearning\"\n    )\n    # Execute the MySQL query\n    cursor = mydb.cursor()\n    cursor.execute(\"SELECT * FROM car_information\")\n    # Fetch the data\n    data = cursor.fetchall()",
+        "detail": "Functional-Base-Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "ml_learning_from_csv",
+        "kind": 2,
+        "importPath": "Functional-Base-Data-analysis",
+        "description": "Functional-Base-Data-analysis",
+        "peekOfCode": "def ml_learning_from_csv():\n    # Create empty lists for x and y data\n    x = []\n    y = []\n    # Open the output.csv file and read the data as a CSV\n    with open(\"output.csv\", \"r\") as csvfile:\n        # Create a reader object for the CSV data\n        reader = csv.reader(csvfile)\n        # Skip the first row (headers) in the CSV data\n        next(reader)",
+        "detail": "Functional-Base-Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "list_site",
+        "kind": 5,
+        "importPath": "Functional-Base-Data-analysis",
+        "description": "Functional-Base-Data-analysis",
+        "peekOfCode": "list_site = []\nfor i in range(1, 31):\n    string = f\"https://www.truecar.com/used-cars-for-sale/listings/?page={i}\"\n    i += 1\n    list_site.append(string)\n# Extract car data from TrueCar\nnames, years, prices, miles, colors = extract_car_data(list_site)\n# Write car data to database\nwrite_data_to_database(names, years, prices, miles, colors)\n# Write car data from database to CSV file",
+        "detail": "Functional-Base-Data-analysis",
+        "documentation": {}
+    },
+    {
+        "label": "prediction",
+        "kind": 5,
+        "importPath": "Functional-Base-Data-analysis",
+        "description": "Functional-Base-Data-analysis",
+        "peekOfCode": "prediction = ml_learning_from_csv()\n# Print out the collected car data for debugging and analysis purposes\nprint(names)\nprint(years)\nprint(prices)\nprint(miles)\nprint(colors)\nprint(prediction)",
+        "detail": "Functional-Base-Data-analysis",
+        "documentation": {}
+    }
+]
